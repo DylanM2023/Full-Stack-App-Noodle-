@@ -1,9 +1,6 @@
 # Imports flask modules and datetime
 
 from flask import Flask
-from models import db, User
-
-
 import datetime
 
 x = datetime.datetime.now()
@@ -11,9 +8,6 @@ x = datetime.datetime.now()
 # Initialises flask app
 app = Flask(__name__)
 
-# Initialises and creates any tables defined in models
-db.init_app(app)
-db.create_all()
 # Creates a route for /data
 
 @app.route("/data")
