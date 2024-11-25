@@ -130,6 +130,4 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':['rest_framework.permissions.AllowAny']
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:8000',
-]
+CORS_ORIGIN_ALLOW_ALL = True
