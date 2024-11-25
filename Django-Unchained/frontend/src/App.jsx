@@ -7,17 +7,16 @@ const App = () => {
     const [quote, setQuote] = useState("");
 
     useEffect(() => {
-        // Fetch data when the component mounts
         axios
             .get("http://localhost:8000/wel/")
             .then((res) => {
                 setDetails(res.data);
             })
             .catch((err) => {
-                // Handle errors if needed
+
                 console.error(err);
             });
-    }, []); // Empty dependency array means this runs once when the component mounts
+    }, []);
 
     const renderSwitch = (param) => {
         switch (param + 1) {
@@ -60,7 +59,6 @@ const App = () => {
                 setQuote("");
             })
             .catch((err) => {
-                // Handle errors if needed
                 console.error(err);
             });
     };
