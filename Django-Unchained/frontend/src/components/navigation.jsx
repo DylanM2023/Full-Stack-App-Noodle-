@@ -1,8 +1,6 @@
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootsrap/Navbar';
 import React, {useState, useEffect} from 'react';
 
-export function Navigation() {
+const Navigation = () => {
 
     const [isAuth, setIsAuth] = useState(false);
     useEffect(() => {
@@ -12,17 +10,12 @@ export function Navigation() {
     }, [isAuth])
 
     return (
-        <div>
-            <Navbar bg='dark' variant='dark'>
-                <Navbar.Brand href='/'>JWT Authentification</Navbar.Brand>
-                <Nav className = "me-auto">
-                    {isAuth ? <Nav.Link href='/'>Home</Nav.Link>: null}
-                </Nav>
-                <Nav>
-                    { isAuth ? <Nav.Link href='/logout'>Logout</Nav.Link> :
-                                <Nav.Link href='/login'>Login</Nav.Link>}
-                </Nav>
-            </Navbar>
-        </div>
+        <nav>
+            {isAuth ? <a href='/'>Home</a>: null}
+            {isAuth ? <a href='/logout'>Logout</a> :<a href='/login'>Login</a>}
+            <a href="/forum">Forum</a>
+        </nav>
     )
 }
+
+export default Navigation;

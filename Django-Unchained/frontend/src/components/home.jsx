@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Navigation from "./navigation";
+
 
 const Home = () => {
      const [message, setMessage] = useState('');
@@ -23,10 +25,13 @@ const Home = () => {
          })()};
      }, []);
      return (
-        <div className="form-signin mt-5 text-center">
-          <h3>Hi {message}</h3>
-        </div>
-     )
+          <>
+          <Navigation/>
+          <div className="form-signin mt-5 text-center">
+            <h3>Hi {message}</h3>
+          </div>
+          </>
+      )
 }
 
 export default Home;

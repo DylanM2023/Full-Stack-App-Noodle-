@@ -39,6 +39,7 @@ const Login = () => {
                 <div className='Auth-form-content'>
                     <h3 className='Auth-form-title'>Sign in</h3>
                     <div className='form-group mt-3'>
+                        <h1>Username: Dylan Password: 1234</h1>
                         <label>Username</label>
                         <input className='form-control mt-1' placeholder='Enter Username' name='username' type='text' value={username} required onChange={e => setUsername(e.target.value)}/>
                     </div>
