@@ -28,8 +28,7 @@ class HomeView(APIView):
 
     def get(self, request):
 
-        content = { 'message': 'Welcome to the JWT'
-        }
+        content = { 'message': 'Welcome to the JWT'}
 
         return Response(content)
 

@@ -34,21 +34,21 @@ const Login = () => {
     }
 
     return(
-        <div className='Auth-form-container'>
-            <form className='Auth-form' onSubmit={submit}>
-                <div className='Auth-form-content'>
-                    <h3 className='Auth-form-title'>Sign in</h3>
-                    <div className='form-group mt-3'>
+        <div className='flex flex-col'>
+            <form  className=' justify-items-center object-center py-28' onSubmit={submit}>
+                <div >
+                    <h3 className='p-2 text-3xl'>Sign in</h3>
+                    <div>
                         <h1>Username: Dylan Password: 1234</h1>
                         <label>Username</label>
-                        <input className='form-control mt-1' placeholder='Enter Username' name='username' type='text' value={username} required onChange={e => setUsername(e.target.value)}/>
+                        <input placeholder='Enter Username' name='username' type='text' value={username} required onChange={e => setUsername(e.target.value)}/>
                     </div>
-                    <div className='form-group mt-3'>
+                    <div>
                         <label>Password</label>
-                        <input className='form-control mt-1' placeholder='Enter Password' name='password' type='text' value={password} required onChange={e => setPassword(e.target.value)}/>
+                        <input placeholder='Enter Password' name='password' type='text' value={password} required onChange={e => setPassword(e.target.value)}/>
                     </div>
-                    <div className='d-grid gap-2 mt-3'>
-                        <button type = 'submit' className='btn btn-primary'>Submit</button>
+                    <div>
+                        <button type = 'submit'>Submit</button>
                     </div>
                 </div>
             </form>

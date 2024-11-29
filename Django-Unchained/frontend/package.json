@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "cd.. && cd server && python manage.py runserver",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
